@@ -2,7 +2,7 @@ require_relative 'view'
 
 module Simpler
   class Controller
-
+     
     attr_reader :name, :request, :response
 
     def initialize(env)
@@ -15,10 +15,8 @@ module Simpler
       @request.env['simpler.controller'] = self
       @request.env['simpler.action'] = action
 
-      set_default_headers
       send(action)
       write_response
-
       @response.finish
     end
 
@@ -28,8 +26,12 @@ module Simpler
       self.class.name.match('(?<name>.+)Controller')[:name].downcase
     end
 
-    def set_default_headers
-      @response['Content-Type'] = 'text/html'
+    def headers
+      @response
+    end
+
+    def status(status)
+      @response.status = status
     end
 
     def write_response
