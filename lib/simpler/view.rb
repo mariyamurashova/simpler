@@ -10,9 +10,7 @@ module Simpler
     end
 
     def render(binding)
-      template = File.read(template_path)
-
-      ERB.new(template).result(binding)
+      ERB.new(get_template_or_text_plain).result(binding)
     end
 
     private
@@ -31,8 +29,17 @@ module Simpler
 
     def template_path
       path = template || [controller.name, action].join('/')
+        if path.class == Hash 
+          return path 
+        else 
+          Simpler.root.join(VIEW_BASE_PATH, "#{path}.html.erb")
+        end
+    end
 
-      Simpler.root.join(VIEW_BASE_PATH, "#{path}.html.erb")
+    def get_template_or_text_plain
+      text = template_path
+      return text[:plain] if text[:plain] != " " 
+      text = File.read(text)
     end
 
   end
