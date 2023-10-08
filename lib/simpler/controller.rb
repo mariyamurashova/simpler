@@ -26,6 +26,10 @@ module Simpler
       self.class.name.match('(?<name>.+)Controller')[:name].downcase
     end
 
+    def params
+     ((@request.path.split('/'))[2]).to_i
+    end
+
     def headers
       @response
     end
@@ -36,16 +40,12 @@ module Simpler
 
     def write_response
       body = render_body
-
+      
       @response.write(body)
     end
 
     def render_body
       View.new(@request.env).render(binding)
-    end
-
-    def params
-      @request.params
     end
 
     def render(template)
