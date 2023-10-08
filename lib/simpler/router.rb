@@ -3,9 +3,11 @@ require_relative 'router/route'
 module Simpler
   class Router
 
+    attr_reader :routes
+
     def initialize
       @routes = []
-    end
+    end 
 
     def get(path, route_point)
       add_route(:get, path, route_point)
@@ -18,8 +20,11 @@ module Simpler
     def route_for(env)
       method = env['REQUEST_METHOD'].downcase.to_sym
       path = env['PATH_INFO']
-
-      @routes.find { |route| route.match?(method, path) }
+      if path_include_id?(path)
+        find_route_for_action_show(method,path)
+      else
+        @routes.find { |route| route.match?(method, path) }
+      end  
     end
 
     private
@@ -35,6 +40,19 @@ module Simpler
 
     def controller_from_string(controller_name)
       Object.const_get("#{controller_name.capitalize}Controller")
+    end
+
+    def path_include_id?(path)
+      !(path.split('/'))[2].nil?
+    end
+
+    def get_path_for_action_show(path)
+      path.split('/').delete_at(1)
+    end
+
+    def find_route_for_action_show(method, path)
+      
+      @routes.find { |route| route.match?(method, "/#{get_path_for_action_show(path)}/:id") }
     end
 
   end
