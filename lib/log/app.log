@@ -1,0 +1,69 @@
+I, [2023-10-08T15:51:55.772411 #3658]  INFO -- : Request: GET /tests/1 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T15:51:55.772533 #3658] DEBUG -- : nil
+I, [2023-10-08T15:54:02.993554 #3674]  INFO -- : Request: GET /tests/1 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T15:54:02.993647 #3674] DEBUG -- : nil
+I, [2023-10-08T15:55:32.588380 #3688]  INFO -- : Request: GET /tests/1 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T15:55:32.588492 #3688] DEBUG -- : nil
+I, [2023-10-08T15:56:07.959557 #3688]  INFO -- : Request: GET /tests/3 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T15:56:07.959626 #3688] DEBUG -- : nil
+I, [2023-10-08T15:59:06.690152 #3717]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T15:59:06.690241 #3717] DEBUG -- : nil
+I, [2023-10-08T16:04:37.106895 #3760]  INFO -- : Request: GET /tests format=month%2Cminute%2Cday%2Csecond
+     Handler: TestsController#index 
+     Parameters:
+D, [2023-10-08T16:04:37.107069 #3760] DEBUG -- : nil
+I, [2023-10-08T16:06:53.286279 #3760]  INFO -- : Request: GET /tests/2/ format=month%2Cminute%2Cday%2Csecond
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:06:53.286369 #3760] DEBUG -- : nil
+I, [2023-10-08T16:14:44.824917 #3822]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:14:44.825046 #3822] DEBUG -- : nil
+I, [2023-10-08T16:16:21.304835 #3840]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:16:21.304950 #3840] DEBUG -- : nil
+I, [2023-10-08T16:17:20.580456 #3851]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:17:20.580604 #3851] DEBUG -- : nil
+I, [2023-10-08T16:22:31.673413 #3911]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:22:31.673522 #3911] DEBUG -- : nil
+I, [2023-10-08T16:24:02.990234 #3923]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:24:02.990351 #3923] DEBUG -- : nil
+I, [2023-10-08T16:31:41.831671 #3973]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:31:41.831805 #3973] DEBUG -- : nil
+I, [2023-10-08T16:32:35.188045 #4013]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+D, [2023-10-08T16:32:35.188174 #4013] DEBUG -- : nil
+I, [2023-10-08T16:33:13.873173 #4013]  INFO -- : Request: GET /tests 
+     Handler: TestsController#index 
+     Parameters:
+D, [2023-10-08T16:33:13.873273 #4013] DEBUG -- : nil
+I, [2023-10-08T20:06:47.444994 #1584]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
+I, [2023-10-08T20:09:26.839363 #1584]  INFO -- : Request: GET /tests 
+     Handler: TestsController#index 
+     Parameters:
+I, [2023-10-08T20:25:47.020864 #2065]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:

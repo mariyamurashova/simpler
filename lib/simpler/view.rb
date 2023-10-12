@@ -29,18 +29,18 @@ module Simpler
 
     def template_path
       path = template || [controller.name, action].join('/')
-        if path.class == Hash 
-          return path 
-        else 
-          Simpler.root.join(VIEW_BASE_PATH, "#{path}.html.erb")
-        end
+      if path.class ==Hash
+        return path 
+      else 
+        Simpler.root.join(VIEW_BASE_PATH, "#{path}.html.erb")
+      end
     end
 
     def get_template_or_text_plain
       text = template_path
-      return text[:plain] if text[:plain] != " " 
+      return text[:plain]  if text.class==Hash
       text = File.read(text)
     end
-
   end
+
 end
