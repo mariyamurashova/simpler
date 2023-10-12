@@ -64,3 +64,6 @@ I, [2023-10-08T20:06:47.444994 #1584]  INFO -- : Request: GET /tests/2
 I, [2023-10-08T20:09:26.839363 #1584]  INFO -- : Request: GET /tests 
      Handler: TestsController#index 
      Parameters:
+I, [2023-10-08T20:25:47.020864 #2065]  INFO -- : Request: GET /tests/2 
+     Handler: TestsController#show 
+     Parameters:
